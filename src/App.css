@@ -55,69 +55,279 @@ body {
   z-index: 9;
 }
 
-.parent{
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .parent {
+    display: flex;
+    flex-direction: column !important;
+    overflow: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  .lefttop {
+    padding-left: 2vw;
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: column !important;
+    flex: 1;
+  }
+
+  .left {
+    width: 100vw !important;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right {
+    width: 100vw !important;
+  }
+
+  .donutContainer {
+    height: 50vw !important;
+    width: 100vw !important;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .donutText {
+    position: absolute;
+    top: 0;
+    height: 50vw !important;
+    width: 100vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .leftdownbox {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2vw !important;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-right: 2vw !important;
+  }
+
+  .tableelerowstate {
+    padding-left: 5vw !important;
+    width: 30vw !important;
+  }
+
+  .tableelerowconfirmed {
+    width: 20vw !important;
+  }
+
+  .tableelerowactive {
+    width: 20vw !important;
+  }
+
+  .tableelerowrecovered {
+    width: 20vw !important;
+  }
+
+  .titlerowstate {
+    padding-left: 5vw !important;
+    width: 30vw !important;
+  }
+
+  .titlerowconfirmed {
+    width: 20vw !important;
+  }
+
+  .titlerowactive {
+    width: 20vw !important;
+  }
+
+  .titlerowrecovered {
+    width: 20vw !important;
+  }
+
+  .container {
+    width: 100vw !important;
+    height: auto !important;
+    padding: 16px;
+  }
+
+  .donut {
+    height: 50vw !important;
+    width: 100vw !important;
+  }
+}
+
+.parent {
   height: 100vh;
-width: 100vw;
-overflow: hidden;
-display: flex;
-flex-direction: row
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
 }
 
-.left{
+.left {
   width: 48vw;
-display: flex;
-flex-direction: column
+  display: flex;
+  flex-direction: column;
 }
 
-.lefttop{
+.lefttop {
   padding-left: 2vw;
-padding-top: 2vh;
-display: flex;
-flex-direction: row;
-flex: 1
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
 }
 
-.donutContainer{
+.right {
+  width: 100vw !important;
+}
+
+.donutContainer {
   height: 35vh;
-width: 15vw;
-position: relative;
-text-align: center;
-justify-content: center
+  width: 15vw;
+  position: relative;
+  text-align: center;
+  justify-content: center;
 }
 
-.donutText{
+.donut {
+  height: 35vh;
+  width: 15vw;
+}
+
+.donutText {
   position: absolute;
-top: 0;
-height: 35vh;
-width: 15vw;
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column
-}
-
-.leftdownbox{
+  top: 0;
+  height: 35vh;
+  width: 15vw;
   display: flex;
-flex-direction: column;
-margin-left: 2vw;
-box-shadow: 0 0 5px rgba(0,0,0,0.5);
-border-radius: 20px;
-margin-bottom: 20px
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.titlerow{
+.leftdownbox {
   display: flex;
-flex-direction: row;
-font-weight: bold;
-height: 50px;
-align-items: center;
-color: orange
+  flex-direction: column;
+  margin-left: 2vw;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
-.tablele{
+.titlerow {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  height: 50px;
+  align-items: center;
+  color: orange;
+}
+
+.titlerowstate {
+  padding-left: 2.5vw;
+  width: 15vw;
+}
+
+.titlerowconfirmed {
+  width: 10vw;
+}
+
+.titlerowactive {
+  width: 10vw;
+}
+
+.titlerowrecovered {
+  width: 10vw;
+}
+
+.tablele {
   overflow: auto;
-display: flex;
-flex-direction: column;
-height: 50vh;
-padding-bottom: 20px
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  padding-bottom: 20px;
+}
+
+.tableelerow {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+
+.tableelerowstate {
+  padding-left: 2.5vw;
+  width: 15vw;
+}
+
+.tableelerowconfirmed {
+  width: 10vw;
+}
+
+.tableelerowactive {
+  width: 10vw;
+}
+
+.tableelerowrecovered {
+  width: 10vw;
+}
+
+.toprightrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.rowelered {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 0, 0, 0.2);
+  justify-content: center;
+  border-radius: 2vh;
+  border: 3px solid red;
+}
+
+.roweleblue {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 255, 0.2);
+  justify-content: center;
+  border-radius: 2vh;
+  border: 3px solid blue;
+}
+
+.rowelegreen {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 255, 0, 0.2);
+  justify-content: center;
+  border-radius: 2vh;
+  border: 3px solid green;
+}
+
+.rowelegrey {
+  padding-left: 2vw;
+  padding-right: 2vw;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(128, 128, 128, 0.2);
+  justify-content: center;
+  border-radius: 2vh;
+  border: 3px solid grey;
 }

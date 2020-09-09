@@ -102,71 +102,20 @@ function Map(props) {
 
   return (
     <div className="full-width-height container">
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-around",
-          textAlign: "center",
-        }}
-      >
-        <div
-          style={{
-            height: "10vh",
-            width: "10vw",
-            display: "flex",
-            flexDirection: "column",
-            background: "rgba(255,0,0,0.2)",
-            justifyContent: "center",
-            borderRadius: "2vh",
-            border: "3px solid red",
-          }}
-        >
+      <div className="toprightrow">
+        <div className="rowelered">
           <div style={{ color: "red", fontWeight: "bold" }}>Confirmed</div>
           <div style={{ color: "red" }}>{blockData.confirmed}</div>
         </div>
-        <div
-          style={{
-            height: "10vh",
-            width: "10vw",
-            display: "flex",
-            flexDirection: "column",
-            background: "rgba(0,0,255,0.2)",
-            justifyContent: "center",
-            borderRadius: "2vh",
-            border: "3px solid blue",
-          }}
-        >
+        <div className="roweleblue">
           <div style={{ color: "blue", fontWeight: "bold" }}>Active</div>
           <div style={{ color: "blue" }}>{blockData.active}</div>
         </div>
-        <div
-          style={{
-            height: "10vh",
-            width: "10vw",
-            display: "flex",
-            flexDirection: "column",
-            background: "rgba(0,255,0,0.2)",
-            justifyContent: "center",
-            borderRadius: "2vh",
-            border: "3px solid green",
-          }}
-        >
+        <div className="rowelegreen">
           <div style={{ color: "green", fontWeight: "bold" }}>Recovered</div>
           <div style={{ color: "green" }}>{blockData.recovered}</div>
         </div>
-        <div
-          style={{
-            height: "10vh",
-            width: "10vw",
-            display: "flex",
-            flexDirection: "column",
-            background: "rgba(128,128,128,0.2)",
-            justifyContent: "center",
-            borderRadius: "2vh",
-            border: "3px solid grey",
-          }}
-        >
+        <div className="rowelegrey">
           <div style={{ color: "grey", fontWeight: "bold" }}>Deaths</div>
           <div style={{ color: "grey" }}>{blockData.deaths}</div>
         </div>

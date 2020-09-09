@@ -189,61 +189,45 @@ class App extends React.Component {
         <div className="left">
           <div className="lefttop">
             <div className="donutContainer">
-              <DonutChart
-                style={{ height: "35vh", width: "15vw" }}
-                data={this.state.donutData}
-              />
+              <DonutChart className="donut" data={this.state.donutData} />
               <div className="donutText">
                 <div style={{ fontWeight: "bold" }}>Confirmed</div>
                 <div>{this.state.confirmed}</div>
               </div>
             </div>
-
-            <LineChart
-              hideXAxis={true}
-              hideYAxis={true}
-              height={200}
-              width={400}
-              data={this.state.lineData}
-              strokeWidth={4}
-            />
+            <div style={{display: "block", margin: "auto"}}>
+              <LineChart
+                hideXAxis={true}
+                hideYAxis={true}
+                height={200}
+                width={400}
+                data={this.state.lineData}
+                strokeWidth={4}
+              />
+            </div>
           </div>
           <div className="leftdownbox">
             <div className="titlerow">
-              <div style={{ paddingLeft: "2.5vw", width: "15vw" }}>State</div>
-              <div style={{ width: "10vw" }}>Confirmed</div>
-              <div style={{ width: "10vw" }}>Active</div>
-              <div style={{ width: "10vw" }}>Recovered</div>
+              <div className="titlerowstate">State</div>
+              <div className="titlerowconfirmed">Confirmed</div>
+              <div className="titlerowactive">Active</div>
+              <div className="titlerowrecovered">Recovered</div>
             </div>
             <div className="tablele">
               {DATA.statewise.map((ele) =>
                 ele.state !== "Total" ? (
-                  <div
-                    key={`${ele.statecode}`}
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      paddingBottom: "20px",
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: "15vw",
-                        paddingLeft: "2.5vw",
-                      }}
-                    >
-                      {ele.state}
-                    </div>
-                    <div style={{ width: "10vw" }}>{ele.confirmed}</div>
-                    <div style={{ width: "10vw" }}>{ele.active}</div>
-                    <div style={{ width: "10vw" }}>{ele.recovered}</div>
+                  <div key={`${ele.statecode}`} className="tableelerow">
+                    <div className="tableelerowstate">{ele.state}</div>
+                    <div className="tableelerowconfirmed">{ele.confirmed}</div>
+                    <div className="tableelerowactive">{ele.active}</div>
+                    <div className="tableelerowrecovered">{ele.recovered}</div>
                   </div>
                 ) : null
               )}
             </div>
           </div>
         </div>
-        <div style={{ width: "48vw" }}>
+        <div className="right">
           <Map
             hookLine={(str) => this.getLineDataHook(str)}
             hookDefLine={() => this.getLineData()}
