@@ -103,7 +103,7 @@ body {
   }
 
   .lefttop {
-    padding-left: 2vw;
+    padding-right: 6vw !important;
     padding-top: 2vh;
     display: flex;
     flex-direction: column !important;
@@ -186,7 +186,7 @@ body {
   .container {
     width: 100vw !important;
     height: auto !important;
-    padding: 16px;
+    padding: 0px !important;
   }
 
   .donut {
