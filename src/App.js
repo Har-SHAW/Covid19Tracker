@@ -195,14 +195,17 @@ class App extends React.Component {
                 <div>{this.state.confirmed}</div>
               </div>
             </div>
-            <div style={{display: "block", margin: "auto"}}>
+            <div className="lineclass">
               <LineChart
                 hideXAxis={true}
                 hideYAxis={true}
+                hideXLabel={true}
+                hideYLabel={true}
                 height={200}
                 width={400}
                 data={this.state.lineData}
                 strokeWidth={4}
+                ticks={7}
               />
             </div>
           </div>

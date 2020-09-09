@@ -55,7 +55,7 @@ body {
   z-index: 9;
 }
 
-@media only screen and (max-width: 1150px){
+@media only screen and (max-width: 1150px) {
   .lefttop {
     padding-left: 2vw;
     padding-top: 2vh;
@@ -100,6 +100,11 @@ body {
     flex-direction: column !important;
     overflow: auto !important;
     overflow-x: hidden !important;
+    width: 100vw !important;
+  }
+
+  .lineclass{
+    transform: scale(0.7);
   }
 
   .lefttop {
@@ -251,7 +256,8 @@ body {
   margin-left: 2vw;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .titlerow {
@@ -368,4 +374,8 @@ body {
   justify-content: center;
   border-radius: 20px;
   border: 3px solid grey;
+}
+
+.lineclass{
+  margin: auto;
 }
