@@ -55,6 +55,44 @@ body {
   z-index: 9;
 }
 
+@media only screen and (max-width: 1150px){
+  .lefttop {
+    padding-left: 2vw;
+    padding-top: 2vh;
+    display: flex;
+    flex-direction: column !important;
+    flex: 1;
+  }
+
+  .donutContainer {
+    height: 25vh !important;
+    width: 50vw !important;
+    position: relative;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .donutText {
+    position: absolute;
+    top: 0;
+    height: 25vh !important;
+    width: 50vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .donut {
+    height: 25vh !important;
+    width: 50vw !important;
+  }
+  .parent {
+    display: flex;
+    overflow: auto !important;
+    overflow-x: hidden !important;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   .parent {
@@ -289,7 +327,7 @@ body {
   flex-direction: column;
   background: rgba(255, 0, 0, 0.2);
   justify-content: center;
-  border-radius: 2vh;
+  border-radius: 20px;
   border: 3px solid red;
 }
 
@@ -302,7 +340,7 @@ body {
   flex-direction: column;
   background: rgba(0, 0, 255, 0.2);
   justify-content: center;
-  border-radius: 2vh;
+  border-radius: 20px;
   border: 3px solid blue;
 }
 
@@ -315,7 +353,7 @@ body {
   flex-direction: column;
   background: rgba(0, 255, 0, 0.2);
   justify-content: center;
-  border-radius: 2vh;
+  border-radius: 20px;
   border: 3px solid green;
 }
 
@@ -328,6 +366,6 @@ body {
   flex-direction: column;
   background: rgba(128, 128, 128, 0.2);
   justify-content: center;
-  border-radius: 2vh;
+  border-radius: 20px;
   border: 3px solid grey;
 }
