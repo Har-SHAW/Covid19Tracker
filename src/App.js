@@ -68,7 +68,7 @@ class App extends React.Component {
         points: [],
       },
       {
-        color: "grey",
+        color: "lightgrey",
         points: [],
       },
     ];
@@ -113,7 +113,7 @@ class App extends React.Component {
               label: "Deaths",
               value:
                 (parseInt(data[i].deaths) / parseInt(data[i].confirmed)) * 100,
-              stroke: "grey",
+              stroke: "lightgrey",
             },
             {
               label: "Recovered",
@@ -142,7 +142,7 @@ class App extends React.Component {
         points: [],
       },
       {
-        color: "grey",
+        color: "lightgrey",
         points: [],
       },
     ];
@@ -168,7 +168,7 @@ class App extends React.Component {
         },
         {
           value: (parseInt(data.deaths) / parseInt(data.confirmed)) * 100,
-          stroke: "grey",
+          stroke: "lightgrey",
         },
         {
           value: (parseInt(data.recovered) / parseInt(data.confirmed)) * 100,
@@ -185,52 +185,15 @@ class App extends React.Component {
         <PuffLoader size={75} />
       </div>
     ) : (
-      <div
-        style={{
-          height: "100vh",
-          width: "100vw",
-          overflow: "hidden",
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
-        <div
-          style={{ width: "48vw", display: "flex", flexDirection: "column" }}
-        >
-          <div
-            style={{
-              paddingLeft: "2vw",
-              paddingTop: "2vh",
-              display: "flex",
-              flexDirection: "row",
-              flex: 1,
-            }}
-          >
-            <div
-              style={{
-                height: "35vh",
-                width: "15vw",
-                position: "relative",
-                textAlign: "center",
-                justifyContent: "center",
-              }}
-            >
+      <div className="parent">
+        <div className="left">
+          <div className="lefttop">
+            <div className="donutContainer">
               <DonutChart
                 style={{ height: "35vh", width: "15vw" }}
                 data={this.state.donutData}
               />
-              <div
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  height: "35vh",
-                  width: "15vw",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  flexDirection: "column",
-                }}
-              >
+              <div className="donutText">
                 <div style={{ fontWeight: "bold" }}>Confirmed</div>
                 <div>{this.state.confirmed}</div>
               </div>
@@ -245,41 +208,14 @@ class App extends React.Component {
               strokeWidth={4}
             />
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              marginLeft: "2vw",
-              boxShadow: "0 0 5px rgba(0,0,0,0.5)",
-              borderRadius: "20px",
-              marginBottom: "20px",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                fontWeight: "bold",
-                height: "50px",
-                alignItems: "center",
-                color: "orange",
-              }}
-            >
+          <div className="leftdownbox">
+            <div className="titlerow">
               <div style={{ paddingLeft: "2.5vw", width: "15vw" }}>State</div>
               <div style={{ width: "10vw" }}>Confirmed</div>
               <div style={{ width: "10vw" }}>Active</div>
               <div style={{ width: "10vw" }}>Recovered</div>
             </div>
-            <div
-              style={{
-                overflow: "auto",
-                display: "flex",
-                flexDirection: "column",
-                height: "50vh",
-                alignSelf: "flex-end",
-                paddingBottom: "20px",
-              }}
-            >
+            <div className="tablele">
               {DATA.statewise.map((ele) =>
                 ele.state !== "Total" ? (
                   <div
@@ -287,14 +223,13 @@ class App extends React.Component {
                     style={{
                       display: "flex",
                       flexDirection: "row",
-                      paddingBottom: "20px"
+                      paddingBottom: "20px",
                     }}
                   >
                     <div
                       style={{
                         width: "15vw",
-                        paddingLeft: "5px",
-                        paddingRight: "5px",
+                        paddingLeft: "2.5vw",
                       }}
                     >
                       {ele.state}

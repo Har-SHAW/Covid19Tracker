@@ -54,3 +54,70 @@ body {
   align-items: center;
   z-index: 9;
 }
+
+.parent{
+  height: 100vh;
+width: 100vw;
+overflow: hidden;
+display: flex;
+flex-direction: row
+}
+
+.left{
+  width: 48vw;
+display: flex;
+flex-direction: column
+}
+
+.lefttop{
+  padding-left: 2vw;
+padding-top: 2vh;
+display: flex;
+flex-direction: row;
+flex: 1
+}
+
+.donutContainer{
+  height: 35vh;
+width: 15vw;
+position: relative;
+text-align: center;
+justify-content: center
+}
+
+.donutText{
+  position: absolute;
+top: 0;
+height: 35vh;
+width: 15vw;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column
+}
+
+.leftdownbox{
+  display: flex;
+flex-direction: column;
+margin-left: 2vw;
+box-shadow: 0 0 5px rgba(0,0,0,0.5);
+border-radius: 20px;
+margin-bottom: 20px
+}
+
+.titlerow{
+  display: flex;
+flex-direction: row;
+font-weight: bold;
+height: 50px;
+align-items: center;
+color: orange
+}
+
+.tablele{
+  overflow: auto;
+display: flex;
+flex-direction: column;
+height: 50vh;
+padding-bottom: 20px
+}
